@@ -73,11 +73,12 @@
             <div :class="playing ? 'icon_play' : 'icon_pase'" @click.stop="togglePlaying" class="control1_play"></div>
           </progress-circle>
         </div>
-        <div class="control2">
+        <div class="control2" @click.stop="showPlaylist">
           <div></div>
         </div>
       </div>
     </transition>
+    <playlist ref="playlist"></playlist>
     <!--audio中的事件 play 可以播放时 error 出现错误时 timeupdata 派发当前时间事件-->
     <audio ref="audio" :src="currentSong.url" @play="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
   </section>
@@ -89,7 +90,10 @@
   import {playMode} from './../../common/js/config'
   import Lyric from 'lyric-parser'
   import Scroll from './../base/scroll.vue'
+  import {playerMixin} from 'common/js/mixin'
+  import Playlist from 'components/playlist/playlist'
   export default {
+    mixins: [playerMixin],
     data () {
       return {
 //        添加一个标志位 防止快速切换歌曲
@@ -107,7 +111,8 @@
     components: {
       progressBar,
       progressCircle,
-      Scroll
+      Scroll,
+      Playlist
     },
     computed: {
       ...mapGetters([
@@ -247,6 +252,9 @@
           this.$refs.lyricList.scrollTo(0, 0, 1000)
         }
         this.playingLyric = txt
+      },
+      showPlaylist () {
+        this.$refs.playlist.show()
       },
       middleTouchStart (e) {
         this.touch.initiated = true
