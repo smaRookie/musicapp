@@ -35,7 +35,7 @@
   }
 </script>
 
-<style scoped lang="less" rel="stylesheet/stylus">
+<style scoped lang="less">
 
   .progress-circle {
     position: relative;

@@ -35,6 +35,7 @@
         type: Array,
         default: null
       },
+//      是否需要下拉刷新
       pullup: {
         type: Boolean,
         default: false
@@ -82,6 +83,21 @@
           let self = this
           this.scroll.on('scroll', (pos) => {
             self.$emit('scroll', pos)
+          })
+        }
+
+        if (this.pullup) {
+          this.scroll.on('scrollEnd', () => {
+//            maxScrollY better-scroll中的属性 最大滚动的距离 当快要滚到底部时就派发事件 实现下拉刷新
+            if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
+              this.$emit('scrollToEnd')
+            }
+          })
+        }
+
+        if (this.beforeScroll) {
+          this.scroll.on('beforeScrollStart', () => {
+            this.$emit('beforeScroll')
           })
         }
       },

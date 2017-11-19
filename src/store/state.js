@@ -1,4 +1,5 @@
 import {playMode} from '../common/js/config'
+import {loadSearch, loadPlay, loadFavorite} from '../common/js/cache'
 /*
 * playing: 是否播放
 * fullScreen: 显示全屏播放器还是迷你播放器
@@ -14,7 +15,12 @@ const state = {
   playList: [],
   sequenceList: [],
   mode: playMode.sequence,
-  currentIndex: -1
+  currentIndex: -1,
+  disc: {},
+  topList: {},
+  searchHistory: loadSearch(),
+  playHistory: loadPlay(),
+  favoriteList: loadFavorite()
 }
 
 export default state
