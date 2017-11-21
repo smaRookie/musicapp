@@ -37,18 +37,32 @@ npm run build --report
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/11.png)
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/12.png)
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/13.png)
+＜/br＞
 主要功能:
+＜/br＞
 1.轮播图片 热门歌单推荐
+＜/br＞
 2.歌手栏
+＜/br＞
 3.最近热门排行榜音乐
+＜/br＞
 4.搜索栏
+＜/br＞
 5.个人信息
+＜/br＞
 页面的大体布局采用flex布局在各个型号有较好的适配
+＜/br＞
 在解决跨域问题采用了第三方jsonP库自己进行了封装,封装成promise对象
+＜/br＞
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/14.png)
+＜/br＞
 实现了加载图片
+＜/br＞
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/15.png)
+＜/br＞
 下拉刷新：通过监听scroll到距离底部50px是派发出事件父组件再从接口中获取数据
+＜/br＞
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/16.png)
+＜/br＞
 
 
