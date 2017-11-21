@@ -19,4 +19,5 @@ npm run build
 npm run build --report
 ```
 音乐数据是从qq音乐上抓取的,通过jsonp来解决跨域问题，
-有些音乐数据有来源限制解决方式是通过编写nodejs来
+有些音乐数据有来源限制解决方式是通过编写nodejs
+https://github.com/smaRookie/musicapp/raw/master/rim/1.png
