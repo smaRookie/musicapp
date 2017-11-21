@@ -24,6 +24,7 @@ npm run build --report
 有些音乐数据有来源限制解决方式是通过编写nodejs
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/1.png)
 大体内容：
+
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/2.png)
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/3.png)
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/4.png)
@@ -35,4 +36,10 @@ npm run build --report
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/10.png)
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/11.png)
 ![Alt text](https://github.com/smaRookie/musicapp/raw/master/rim/12.png)
+主要功能:
+1.轮播图片 热门歌单推荐
+2.歌手栏
+3.最近热门排行榜音乐
+4.搜索栏
+5.个人信息
 
