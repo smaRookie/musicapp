@@ -18,8 +18,5 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
-音乐播放器
->>>>>>> 1cba5bcbeb2d131315af9dc4cf239da86debfaa3
+音乐数据是从qq音乐上抓取的,通过jsonp来解决跨域问题，
+有些音乐数据有来源限制解决方式是通过编写nodejs来
