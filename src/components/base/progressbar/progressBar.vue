@@ -60,6 +60,7 @@
       progressClick (e) {
 //         Element.getBoundingClientRect()方法用于获取某个元素相对于视窗的位置集合。集合中有top, right, bottom, left等属性
         const rect = this.$refs.progressBar.getBoundingClientRect()
+        // 这里是获取进度条外面的包裹元素距离屏幕左边的距离， 和点击的时候距离左边的距离 。后者减去前者为进度条应该为的宽度
         const offsetWidth = e.pageX - rect.left
         this._offset(offsetWidth)
         // 这里当我们点击 progressBtn 的时候，e.offsetX 获取不对
